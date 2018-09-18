@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bootstrap3 %}
+
+{% block content %}
+<div class="col-sm-8">
+    <h3>Blog</h3>
+    {% if latest_article_list %}
+        {% for article in latest_article_list %}
+        <div><a href="{% url 'blog:detail' article.id %}">{{ article.title }}</a></div>
+        {% endfor %}
+    {% else %}
+    <p>No polls are available.</p>
+    {% endif %}
+</div>
+{% endblock %}

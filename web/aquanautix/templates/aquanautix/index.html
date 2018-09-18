@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bootstrap3 %}
+
+{% block content %}
+<div class="col-sm-8">
+    <h3>Artifacts</h3>
+    {% if artifact_list %}
+        {% for artifact in artifact_list %}
+        <div class="col-sm-8">
+            <div class="col-sm-4">
+                <a href="{% url 'artifacts:detail' artifact.id %}">
+                    <img src="{{ artifact.picture_set.first.image.url }}" width="100%">
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="{% url 'artifacts:detail' artifact.id %}">{{ artifact.name }}</a>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>No polls are available.</p>
+    {% endif %}
+</div>
+{% endblock %}

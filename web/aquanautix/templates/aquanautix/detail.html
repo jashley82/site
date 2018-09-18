@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load bootstrap3 %}
+
+{% block content %}
+<div class="col-sm-8">
+    <h1>{{ artifact.name }}</h1>
+    <h6>{{ artifact.pub_date }}</h6>
+    <p>{{ artifact.description }}</p>
+
+    {% for picture in artifact.picture_set.all %}
+        <img src="{{ picture.image.url }}">
+    {% endfor %}
+</div>
+{% endblock %}
