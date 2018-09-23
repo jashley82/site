@@ -31,8 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'aquanautix.apps.AquanautixConfig',
-    'crm.apps.CrmConfig',
+    'artifacts.apps.ArtifactsConfig',
     'blog.apps.BlogConfig',
     'polls.apps.PollsConfig',
 

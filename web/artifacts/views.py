@@ -5,11 +5,11 @@ from .models import Artifact
 
 class IndexView(generic.ListView):
     model = Artifact
-    template_name = 'aquanautix/index.html'
+    template_name = 'artifacts/index.html'
     context_object_name = 'artifact_list'
 
 
 class DetailView(generic.DetailView):
     model = Artifact
-    template_name = 'aquanautix/detail.html'
+    template_name = 'artifacts/detail.html'
 

@@ -21,7 +21,7 @@ from django.urls import include, path
 from . import views
 
 urlpatterns = [
-    path('artifacts/', include('aquanautix.urls')),
+    path('artifacts/', include('artifacts.urls')),
     path('blog/', include('blog.urls')),
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),

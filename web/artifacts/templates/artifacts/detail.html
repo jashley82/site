@@ -3,15 +3,18 @@
 
 {% block content %}
 <div class="col-sm-8">
-    <div class="col-sm-4">
+    <div class="col-sm-8">
         <h1>{{ artifact.name }}</h1>
         <h6>{{ artifact.pub_date }}</h6>
         <p>{{ artifact.description }}</p>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-8">
         {% for picture in artifact.picture_set.all %}
+        <div class="col-sm">
             <img src="{{ picture.image.url }}">
+            {{ picture.image.url }}
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 {% endblock %}
